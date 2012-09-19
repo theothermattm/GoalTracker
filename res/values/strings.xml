@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">GoalTracker</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_goals">Goals</string>
+    <string name="hint_add_new_goal">Drink 8 glasses of water</string>
+    <string name="add_new_goal">Add Goal</string>
+
+</resources>
