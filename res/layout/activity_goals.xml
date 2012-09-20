@@ -24,7 +24,7 @@
         android:layout_toRightOf="@+id/text_new_goal"
         android:text="@string/add_new_goal" />
 
-    <ListView
+    <ListView android:id="@+id/list_view_goals"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/button_add_new_goal" >

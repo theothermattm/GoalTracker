@@ -19,11 +19,19 @@ public class GoalTest {
 	public void equalsConsidersEverythingButId() {
 		// given
 		Goal aGoal = getDummyGoal();
+		Date theDate = new Date();
+		
+		// a goal
 		String anId = "id1";
 		aGoal.setId(anId);
+		aGoal.setDueDate(theDate);
+		
+		// a second goal, the same except for id.
 		Goal aDifferentGoal = getDummyGoal();
+		aDifferentGoal.setDueDate(theDate);
 		String aDifferentId = "id2";
 		aDifferentGoal.setId(aDifferentId);
+		
 
 		// when
 		boolean firstComparisonResult = aGoal.equals(aDifferentGoal);
@@ -40,9 +48,16 @@ public class GoalTest {
 	public void hashCodeConsidersEverythingButId() {
 		// given
 		Goal aGoal = getDummyGoal();
+		Date theDate = new Date();
+		
+		// a goal
 		String anId = "id1";
 		aGoal.setId(anId);
+		aGoal.setDueDate(theDate);
+		
+		// a second goal, the same except for id.
 		Goal aDifferentGoal = getDummyGoal();
+		aDifferentGoal.setDueDate(theDate);
 		String aDifferentId = "id2";
 		aDifferentGoal.setId(aDifferentId);
 
@@ -67,6 +82,8 @@ public class GoalTest {
 		testGoal.setDueDate(testDate);
 		String testNotes = "blah blah blah";
 		testGoal.setNotes(testNotes);
+		int testWeight = 5;
+		testGoal.setWeight(testWeight);
 
 		return testGoal;
 	}
