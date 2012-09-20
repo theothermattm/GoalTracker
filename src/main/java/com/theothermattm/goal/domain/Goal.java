@@ -34,6 +34,13 @@ public class Goal {
 	private String notes;
 
 	/**
+	 * The "weight"of the goal. Meaning, for example, a positive goal might be
+	 * "Run 3 miles" and have a value of 2. A negative goal might be
+	 * "Eat McDonald's"and have a weight of -5.
+	 */
+	private int weight;
+
+	/**
 	 * Creates a basic goal with a name and no dueDate.
 	 * 
 	 * @param name
@@ -76,6 +83,14 @@ public class Goal {
 		this.notes = notes;
 	}
 
+	public int getWeight() {
+		return weight;
+	}
+
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -83,6 +98,7 @@ public class Goal {
 		result = prime * result + ((dueDate == null) ? 0 : dueDate.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((notes == null) ? 0 : notes.hashCode());
+		result = prime * result + weight;
 		return result;
 	}
 
@@ -109,6 +125,8 @@ public class Goal {
 			if (other.notes != null)
 				return false;
 		} else if (!notes.equals(other.notes))
+			return false;
+		if (weight != other.weight)
 			return false;
 		return true;
 	}

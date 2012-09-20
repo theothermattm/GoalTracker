@@ -10,7 +10,7 @@ import com.theothermattm.goal.domain.Goal;
  * @author mattm
  * 
  */
-interface GoalService {
+public interface GoalService {
 	/**
 	 * Adds a goal to the underlying repository. l
 	 * 
